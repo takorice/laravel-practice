@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Public Routes
+Route::post('login', [\App\Http\Controllers\LoginController::class, 'login']);
+
+// Protected Routes
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('logout', [\App\Http\Controllers\LoginController::class, 'logout']);
+    Route::get('user', function (Request $request) {
+        return $request->user();
+    });
 });
