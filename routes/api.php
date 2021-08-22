@@ -20,6 +20,10 @@ Route::post('login', [\App\Http\Controllers\LoginController::class, 'login']);
 // Protected Routes
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [\App\Http\Controllers\LoginController::class, 'logout']);
+
+    Route::apiResource('tasks', \App\Http\Controllers\TaskController::class);
+    // Route::put('tasks/update_status/{task}', [\App\Http\Controllers\TaskController::class, 'updateStatus']);
+    Route::put('tasks/update_done/{task}', [\App\Http\Controllers\TaskController::class, 'updateDone']);
     Route::get('user', function (Request $request) {
         return $request->user();
     });
