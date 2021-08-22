@@ -3,8 +3,8 @@ import { useLogin } from '../../queries/AuthQuery';
 
 const LoginPage: React.VFC = () => {
     const login = useLogin();
-    const [email, setEmail] = useState('admin@example.net');
-    const [password, setPassword] = useState('password');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -31,8 +31,8 @@ const LoginPage: React.VFC = () => {
                                 <input
                                     type="password"
                                     className="input"
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}/>
+                                    value={password}
+                                    onChange={e => setPassword(e.target.value)}/>
                             </div>
                             <button type="submit" className="btn">ログイン</button>
                         </form>
