@@ -36,5 +36,9 @@
         "*.php": [
             "vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix"
         ]
+    },
+    "dependencies": {
+        "@ant-design/icons": "^4.6.3",
+        "antd": "^4.16.12"
     }
 }
