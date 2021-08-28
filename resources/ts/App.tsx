@@ -17,12 +17,14 @@ const App: React.VFC = () => {
         }
     });
     return (
-        <AuthProvider>
-            <QueryClientProvider client={queryClient}>
-                <Router/>
-                <ToastContainer hideProgressBar={true}/>
-            </QueryClientProvider>
-        </AuthProvider>
+        <div className={"wrapper"}>
+            <AuthProvider>
+                <QueryClientProvider client={queryClient}>
+                    <Router/>
+                    <ToastContainer hideProgressBar={true}/>
+                </QueryClientProvider>
+            </AuthProvider>
+        </div>
     );
 };
 
