@@ -1,4 +1,4 @@
-# laravel-sap-sample
+# laravel-spa-sample
 
 SPA のバックエンドとして Laravel を使う場合における API と、Unit Test の実装サンプルです。  
 開発環境にはLaravel Sail、認証には Laravel Sanctum を使用していますので、数分でセットアップが可能です (前提ソフトウェアは別途必要です)。
